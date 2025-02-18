@@ -38,13 +38,24 @@ export const App = () => {
     setTasks(newTasks);
   };
 
+  const onTaskAdd = (title, description) => {
+    const newTask = {
+      id: tasks.length + 1,
+      title,
+      description,
+      isCompleted: false,
+    };
+
+    setTasks([...tasks, newTask]);
+  };
+
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-slate-500 p-6">
-      <div className="w-[500px]">
+      <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">
           Gerenciador de Tarefas
         </h1>
-        <AddTask />
+        <AddTask onTaskAdd={onTaskAdd} />
         <ListTasks
           tasks={tasks}
           onTaskClick={onTaskClick}
