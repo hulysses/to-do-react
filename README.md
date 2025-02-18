@@ -4,6 +4,12 @@
 
 O To-Do List é um gerenciador de tarefas simples e eficiente, permitindo que os usuários adicionem, removam, concluam e visualizem suas tarefas de maneira intuitiva. O projeto utiliza o localStorage do navegador para garantir que os dados permaneçam salvos mesmo após a atualização da página.
 
+https://github.com/user-attachments/assets/a8f9c916-7c0d-4227-a708-03f000c4c483
+
+
+## 🌐 Deploy
+[To-Do](https://to-do-list-hulysses.vercel.app/)
+
 ## 🚀 Tecnologias
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
