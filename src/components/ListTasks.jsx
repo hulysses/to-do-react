@@ -1,5 +1,6 @@
 import { Check, ChevronDown, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "./Button";
 
 export const ListTasks = ({ tasks, onTaskClick, onTaskDelete }) => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export const ListTasks = ({ tasks, onTaskClick, onTaskDelete }) => {
         {tasks.map((task) => (
           <li key={task.id} className="flex gap-2">
             <button
-              className={`flex gap-1 w-full bg-slate-400 text-white text-left p-2 rounded-md ${
+              className={`flex gap-1 w-full bg-slate-500 text-white text-left p-2 rounded-md ${
                 task.isCompleted && "line-through"
               }`}
               onClick={() => onTaskClick(task.id)}
@@ -24,18 +25,12 @@ export const ListTasks = ({ tasks, onTaskClick, onTaskDelete }) => {
               {task.isCompleted ? <Check /> : ""}
               {task.title}
             </button>
-            <button
-              className=" bg-slate-400 text-white p-2 rounded-md"
-              onClick={() => onTaskDatailsClick(task)}
-            >
+            <Button onClick={() => onTaskDatailsClick(task)}>
               <ChevronDown />
-            </button>
-            <button
-              className=" bg-slate-400 text-white p-2 rounded-md"
-              onClick={() => onTaskDelete(task.id)}
-            >
+            </Button>
+            <Button onClick={() => onTaskDelete(task.id)}>
               <Trash2 />
-            </button>
+            </Button>
           </li>
         ))}
       </ul>

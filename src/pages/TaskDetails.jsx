@@ -1,5 +1,6 @@
 import { ChevronLeft } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { Title } from "../components/Title";
 
 export const TaskDetails = () => {
   const [searchParams] = useSearchParams();
@@ -17,9 +18,9 @@ export const TaskDetails = () => {
           >
             <ChevronLeft />
           </button>
-          <h1 className="text-3xl text-slate-100 font-bold text-center">
+          <Title>
             Descrição da Tarefa
-          </h1>
+          </Title>
         </div>
         <div className="bg-slate-200 p-4 rounded-md shadow">
           <h2 className="text-xl text-slate-600 font-bold">{title}</h2>
