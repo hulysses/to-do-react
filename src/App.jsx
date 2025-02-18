@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTask } from "./components/AddTask";
 import { ListTasks } from "./components/ListTasks";
 
 export const App = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
 
   const onTaskClick = (id) => {
     const newTasks = tasks.map((task) => {
@@ -35,6 +37,10 @@ export const App = () => {
 
     setTasks([...tasks, newTask]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <div className="w-screen h-screen flex flex-col items-center bg-slate-500 p-6">
