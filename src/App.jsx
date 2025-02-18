@@ -3,20 +3,7 @@ import { AddTask } from "./components/AddTask";
 import { ListTasks } from "./components/ListTasks";
 
 export const App = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Estudar React",
-      description: "Estudar React para criar aplicações web",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      title: "Estudar TailwindCSS",
-      description: "Estudar TailwindCSS para estilizar aplicações web",
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const onTaskClick = (id) => {
     const newTasks = tasks.map((task) => {
