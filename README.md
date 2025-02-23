@@ -1,6 +1,6 @@
 # 📋 To-Do List
 
-## 📝 Sobre o Projet
+## 📝 Sobre o Projeto
 
 O To-Do List é um gerenciador de tarefas simples e eficiente, permitindo que os usuários adicionem, removam, concluam e visualizem suas tarefas de maneira intuitiva. O projeto utiliza o localStorage do navegador para garantir que os dados permaneçam salvos mesmo após a atualização da página.
 
